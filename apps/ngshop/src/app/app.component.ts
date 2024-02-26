@@ -1,13 +1,17 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { NxWelcomeComponent } from './nx-welcome.component';
+// import { NxWelcomeComponent } from './nx-welcome.component';
+import { FooterComponent } from './shared/footer/footer.component';
+import { HeaderComponent } from './shared/header/header.component';
+import { BannerComponent } from '@bluebits/ui';
+
+
 
 @Component({
   standalone: true,
-  imports: [NxWelcomeComponent, RouterModule],
-  selector: 'bluebits-root',
+  imports: [RouterModule, FooterComponent, HeaderComponent, BannerComponent],
+  selector: 'ngshop-root',
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss',
 })
 export class AppComponent {
   title = 'ngshop';
